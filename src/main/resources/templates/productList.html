@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xml:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>상품 목록 페이지</title>
+    <link rel="stylesheet" href="/css/list.css" />
+</head>
+
+<body>
+
+<div class="list con">
+    <ul class="row">
+        <li class="cell" th:each="product : ${list}">
+            <div class="img-box"><img th:src="@{${product.image_url}}" alt=""></div>
+            <div  th:text="${product.id}">아이디</div>
+            <div th:text="${product.price}">가격</div>
+            <div th:text="${product.name}">이름</div>
+            <form>
+                <button type="submit">장바구니</button>
+            </form>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+</body>
+</html>
