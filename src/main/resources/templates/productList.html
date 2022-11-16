@@ -10,7 +10,7 @@
 
 <div class="list con">
     <ul class="row">
-        <li class="cell" th:each="product : ${list}">
+        <li class="cell" th:each="product : ${products}">
             <div class="img-box"><img th:src="@{${product.image_url}}" alt=""></div>
             <div  th:text="${product.id}">아이디</div>
             <div th:text="${product.price}">가격</div>
